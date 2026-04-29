@@ -72,7 +72,11 @@ When data comes from multiple subreddits, mentions are aggregated — a ticker t
 
 ### Fallback: Web Search
 
-When the Reddit API is rate-limited or credentials aren't configured, the tool falls back to the LLM's web search capability to extract the same signals. Less structured but still useful.
+When the Reddit API is rate-limited or credentials aren't configured, the tool falls back to web search to extract the same signals. Two options in priority order:
+1. **OpenClaw search skill** — if installed, use it as the search provider
+2. **Google search** — direct Google search as a last resort
+
+Less structured than the Reddit API but still useful for catching trending tickers and sentiment.
 
 ### User-Configurable Settings
 
